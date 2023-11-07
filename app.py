@@ -1,8 +1,8 @@
 from flask import *
 import pickle
 
-
-model = pickle.load("diab.model", "rb")
+with open("diab.model", "rb") as f:
+    model = pickle.load(f)
 
 app = Flask(__name__)
 
